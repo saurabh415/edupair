@@ -1,0 +1,210 @@
+@import '../variables';
+
+.home {
+  &__hero {
+    background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+    padding: 6rem 0;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
+      opacity: 0.1;
+    }
+
+    &-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      position: relative;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &-subtitle {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      position: relative;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    &-button {
+      background-color: #ffffff;
+      color: #3182ce;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  &__features {
+    padding: 6rem 0;
+    background-color: #f8fafc;
+  }
+
+  &__feature-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__feature {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    &-icon {
+      color: #3182ce;
+      width: 3rem;
+      height: 3rem;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ebf8ff;
+      border-radius: 50%;
+      padding: 0.75rem;
+    }
+
+    &-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #2d3748;
+    }
+
+    &-description {
+      color: #4a5568;
+      line-height: 1.6;
+    }
+  }
+
+  &__how-it-works {
+    padding: 6rem 0;
+    background-color: #ffffff;
+    position: relative;
+
+    &-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 4rem;
+      color: #2d3748;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background-color: #3182ce;
+        border-radius: 2px;
+      }
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    &-step {
+      position: relative;
+      padding: 2rem;
+      background-color: #f8fafc;
+      border-radius: 1rem;
+      text-align: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      &-number {
+        position: absolute;
+        top: -1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3rem;
+        height: 3rem;
+        background-color: #3182ce;
+        color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 1.25rem;
+      }
+
+      &-icon {
+        color: #3182ce;
+        width: 3rem;
+        height: 3rem;
+        margin: 0 auto 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #2d3748;
+      }
+
+      &-description {
+        color: #4a5568;
+        line-height: 1.6;
+      }
+    }
+  }
+} 
